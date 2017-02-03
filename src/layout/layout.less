@@ -1,0 +1,35 @@
+@container-top--height: 50px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container-top {
+    display: flex;
+    min-height: @container-top--height;
+    max-height: @container-top--height;
+    border-bottom: 1px solid gray;
+}
+
+.container-bottom {
+    height: 100%;
+    display: flex;
+}
+
+.container-left {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.container-middle {
+    flex-grow: 3;
+    background: white;
+    height: 100%;
+}
+
+.container-right {
+    flex-grow: 1;
+    height: 100%;
+}

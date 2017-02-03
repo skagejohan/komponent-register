@@ -7,14 +7,15 @@ module.exports = {
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
         'react-hot-loader/patch',
-        './src/bootstrap.tsx'
+        './src/bootstrap.tsx',
+        './src/app.less'
     ],
     output: {
         path: resolve(__dirname, 'dist'),
         filename: 'app.bundle.js'
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx']
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.less']
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -28,6 +29,17 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 use: [ 'awesome-typescript-loader' ]
+            },
+            {
+                test: /\.less$/,
+                use: [ 
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: { importLoaders: 1 }
+                    },
+                    'less-loader'
+                ]
             }
         ]
     },
