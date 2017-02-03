@@ -7,6 +7,7 @@ export default class App extends React.Component<any, any> {
         return (
             <Layout
                 left={<Menu />}
+                middle={this.props.children}
             />
         );
     }

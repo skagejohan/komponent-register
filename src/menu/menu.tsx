@@ -1,14 +1,15 @@
 import * as React from 'react';
+import { Link } from 'react-router';
 
 export default class Menu extends React.Component<any, any> {
     render() {
         return (
             <ul className="menu">
                 <li>
-                    <a href="/komponenter">Komponenter</a>
+                    <Link to="/komponenter">Komponenter</Link>
                 </li>
                 <li>
-                    <a href="/layout">Layout</a>
+                    <Link to="/layout">Layout</Link>
                 </li>
             </ul>
         );

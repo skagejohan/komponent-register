@@ -52,7 +52,7 @@ export default class Layout extends React.Component<ILayoutProps, any> {
                 <div className="container-bottom">
                     {createLeft()}
                     <div className="container-middle">
-                        
+                        {middle}
                     </div>
                     {createRight()}
                 </div>
