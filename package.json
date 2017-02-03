@@ -4,11 +4,15 @@
   "main": "main.js",
   "repository": "https://github.com/skagejohan/komponent-register.git",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "webpack"
   },
   "author": "Skage Spjelkavik",
   "license": "MIT",
   "dependencies": {
     "electron": "^1.4.15"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1"
   }
 }
